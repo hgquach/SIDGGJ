@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class WaveController : MonoBehaviour
 {
@@ -13,6 +14,12 @@ public class WaveController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.layer == 9)
+        {
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            gameObject.GetComponent<CircleCollider2D>().enabled = false;
+            DestroyObject(gameObject);
+        }
         if (collision.gameObject.layer == 8) // The Pillar layer
         {
             //Debug.Log("HIT!");
