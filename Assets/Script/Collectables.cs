@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Collectables : MonoBehaviour {
-
+    public GameManager gamestate;
 	// Use this for initialization
 	void Start () {
-		
+        gamestate = FindObjectOfType<GameManager>();
 	}
 	
 	// Update is called once per frame
@@ -19,6 +19,7 @@ public class Collectables : MonoBehaviour {
         if (other.tag == "Player")
         {
             Destroy(gameObject);
+            gamestate.increaseCurrent();
             Debug.Log("collided");
         }
     }

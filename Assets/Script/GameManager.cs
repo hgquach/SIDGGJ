@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameState : MonoBehaviour {
+public class GameManager : MonoBehaviour {
     public int numOfTotalCollect;
     public int numOfCurrentCollect; 
 	// Use this for initialization
@@ -17,8 +17,15 @@ public class GameState : MonoBehaviour {
 
         if(numOfCurrentCollect == numOfTotalCollect)
         {
-            print("Game Ended")
+            print("Game Ended");
         }
+
+        print(numOfCurrentCollect);
 		
 	}
+
+    public void increaseCurrent()
+    {
+        ++numOfCurrentCollect;
+    }
 }
