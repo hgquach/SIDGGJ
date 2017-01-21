@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Exit : MonoBehaviour {
-		
+
+    public int nextLevel = 2;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -16,6 +19,11 @@ public class Exit : MonoBehaviour {
 
 		void OnTriggerEnter2D(Collider2D other)
 		{
-				Debug.Log("Enter Next Level");
-		}
+            if(other.tag == "Player")
+            {
+                Debug.Log("Enter Next Level");
+                SceneManager.LoadScene(nextLevel);
+            }
+				
+        }
 }

@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Death : MonoBehaviour {
 		public bool isDying;
+
+        public GameOverMenu DeathMenu;
+
 	// Use this for initialization
 	void Start () {
 				isDying = false;
+
 	}
 	
 	// Update is called once per frame
@@ -23,6 +27,8 @@ public class Death : MonoBehaviour {
 				{
 						
 						Destroy(this.gameObject);
+                        //activate death menu
+                        DeathMenu.deathMenu.enabled = true;
 				}
 		}
 }
