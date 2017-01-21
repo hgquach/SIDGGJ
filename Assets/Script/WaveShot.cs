@@ -6,20 +6,22 @@ public class WaveShot : MonoBehaviour {
 
     public GameObject wavePrefab;
     public WaveSpell wave;
+    public Light underglow;
 
     public float baseDirection;
     public float arcWidthDeg;
     public float waveSizeDeg;
     public float speed;
 
-    public string colorsToSep;
+    public string colorsToSep; //What colors of wave are we firing?
     public string[] colors;
 
     public float timer = 0;
     public float timeLimit;
-    public float decayTime;
+    public float decayTime; //When will the wave "decay" (due to time)
 
     public int counter;
+    private int oneAhead; //The predictor for the next colour of the wave.
 
     // Use this for initialization
     void Start () {
@@ -30,6 +32,7 @@ public class WaveShot : MonoBehaviour {
         wave.wavePrefab = wavePrefab;
 
         counter = 0;
+        oneAhead = 1;
 
         //Debug.Log(colorsToSep);
         if(colorsToSep.Length > 0)
@@ -42,20 +45,64 @@ public class WaveShot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         timer += Time.deltaTime;
+
+        float percent = timer / timeLimit;
+        underglow.range = 4 * percent; 
+
         if(timer >= timeLimit)
         {
-            //Debug.Log(colors[counter]); This will be how we figure out what sort of "wave" the item is.
-            counter += 1;
-            if (counter >= colors.Length)
-            {
-                counter = 0;
-            }
-
-            wave.wavePrefab.GetComponent<WaveController>().color = colors[counter];
+            if (colors.Length != 0) // Changes the internal "color" code, so the wave knows what is going to be stopped.
+                {
+                    wave.wavePrefab.GetComponent<WaveController>().color = colors[counter];
+                }
+            else
+                {
+                    wave.wavePrefab.GetComponent<WaveController>().color = "w";
+                }
+            if (colors.Length != 0) // Changes the color of the light under the Generator, so you can predict what's coming up!
+                {
+                    if (colors[oneAhead] == "w")
+                    {
+                        underglow.color = Color.white;
+                    }
+                    if (colors[oneAhead] == "r")
+                    {
+                        underglow.color = Color.red;
+                    }
+                    if (colors[oneAhead] == "g")
+                    {
+                        underglow.color = Color.green;
+                    }
+                    if (colors[oneAhead] == "b")
+                    {
+                        underglow.color = Color.blue;
+                    }
+                    if (colors[oneAhead] == "y")
+                    {
+                        underglow.color = Color.yellow;
+                    }
+                }
+            else
+                {
+                    underglow.color = Color.white;
+                }
 
             float waveSizeDegUse = waveSizeDeg;
             wave.fire(baseDirection, arcWidthDeg, waveSizeDegUse, speed);
             timer = 0;
+
+            underglow.range = 0;
+            
+            counter += 1;
+            oneAhead += 1;
+            if (counter >= colors.Length)
+                {
+                    counter = 0;
+                }
+            if (oneAhead >= colors.Length)
+                {
+                    oneAhead = 0;
+                }
         }
 	}
 }

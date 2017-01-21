@@ -8,7 +8,7 @@ public class WaveController : MonoBehaviour
     float killTime = 0;
     bool dead = false;
 
-    public string color = "w";
+    public string color;
     public string goesThrough;
 
     void Start()
@@ -33,6 +33,10 @@ public class WaveController : MonoBehaviour
                 goesThrough = "YellowObstacle";
             }
         }
+        else
+        {
+            goesThrough = "ALL";
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -44,11 +48,23 @@ public class WaveController : MonoBehaviour
             DestroyObject(gameObject);
         }
 
-        if (collision.gameObject.layer == 8 && !collision.gameObject.CompareTag(goesThrough)) // The Pillar layer
+        if (collision.gameObject.layer == 8) // The Pillar layer
         {
-            gameObject.GetComponent<MeshRenderer>().enabled = false;
-            gameObject.GetComponent<CircleCollider2D>().enabled = false;
-            DestroyObject(gameObject);
+            if (goesThrough == "ALL")
+            {
+                gameObject.GetComponent<MeshRenderer>().enabled = false;
+                gameObject.GetComponent<CircleCollider2D>().enabled = false;
+                DestroyObject(gameObject);
+            }
+            else
+            {
+                if (!collision.gameObject.CompareTag(goesThrough))
+                {
+                    gameObject.GetComponent<MeshRenderer>().enabled = false;
+                    gameObject.GetComponent<CircleCollider2D>().enabled = false;
+                    DestroyObject(gameObject);
+                }
+            }
         }
     }
 
