@@ -2,9 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 
-// Utilizes code from Team Silly-String of Josh Tanenbaum's ICS 169 Capstone Game Project class.
-// With regards to: Cory Sherman; Nathan Krueger; Winston Liang; Tom Tan; Lucas Amutan (who is using the spell code!)
-
 public class SiblingTracker : MonoBehaviour {
 	
 	public float ignoreSiblingCollisionDuration = 7.5f;
@@ -37,7 +34,7 @@ public class SiblingTracker : MonoBehaviour {
         }
 	}
 	
-  	private void IgnoreSiblingCollisions(bool ignore = true)
+  	private void IgnoreSiblingCollisions(bool ignore = true) //Don't collide with other "waves"
     {
         Collider2D collider2D = GetComponent<Collider2D>();
 
