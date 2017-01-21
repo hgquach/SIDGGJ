@@ -6,6 +6,11 @@ public class PlayerControl : MonoBehaviour {
     public float playerSpeed;
     public float moveX;
     public float moveY;
+	public float boostSpd;
+		public int boostTime;
+		public int boostDelay;
+		int boosting;
+
 
     private Rigidbody2D playerRigidbody; 
 
@@ -13,8 +18,10 @@ public class PlayerControl : MonoBehaviour {
 	void Start () {
         playerSpeed = 10f;
         playerRigidbody = GetComponent<Rigidbody2D>();
-
-        
+		boostSpd = 3f;
+				boostTime = 7;
+				boostDelay = 5;
+				boosting = 0;
 		
 	}
 	
@@ -25,7 +32,26 @@ public class PlayerControl : MonoBehaviour {
         moveY = Input.GetAxisRaw("Vertical");
         Vector2 movement = new Vector2(moveX,moveY);
 
-        playerRigidbody.velocity = new Vector2(moveX * playerSpeed, moveY * playerSpeed);
+				if (Input.GetKeyDown(KeyCode.Space) && boosting <= 0)
+				{
+						boosting = boostTime + boostDelay;
+				}
+		
+				if (boosting <= 0)
+				{
+						playerRigidbody.velocity = new Vector2(moveX * playerSpeed, moveY * playerSpeed);
+				}
+				else if (boosting > boostTime)
+				{
+						playerRigidbody.velocity = new Vector2(0, 0);
+						boosting--;
+				}
+				else
+				{
+						playerRigidbody.velocity = new Vector2(moveX * playerSpeed * boostSpd, moveY * playerSpeed * boostSpd);
+						boosting--;
+				}
+        
 		
 	}
 }
