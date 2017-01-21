@@ -49,7 +49,7 @@ public class WaveSpell : MonoBehaviour {
         return fire(new Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad)), speed);
     }
 
-    //This is code from the old "spell" script; kept in in case there is a problem.
+    //This is code from the old "spell" script; kept in case there is a problem.
 
     public GameObject fire(Vector2 direction, float speed)
     {
