@@ -11,7 +11,7 @@ public class Pulsation : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 				rb2D = GetComponent<Rigidbody2D>();
-				speed = 20;
+				speed = 45;
 				percentScale = 1.00f;
 				rotato = rb2D.transform.localRotation;
 	}
