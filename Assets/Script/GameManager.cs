@@ -5,9 +5,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
     public int numOfTotalCollect = 0;
     public int numOfCurrentCollect = 0; 
+	public GameObject exit;
 	// Use this for initialization
 	void Start () {
-         	
+				exit = GameObject.FindWithTag("Finish");
+				exit.SetActive(false);
 	}
 	
 	// Update is called once  per frame
@@ -15,7 +17,7 @@ public class GameManager : MonoBehaviour {
 
         if(numOfCurrentCollect == numOfTotalCollect)
         {
-            print("Game Ended");
+						exit.SetActive(true);
         }
 
         print(numOfCurrentCollect);
