@@ -51,6 +51,8 @@ public class WaveShot : MonoBehaviour {
                 counter = 0;
             }
 
+            wave.wavePrefab.GetComponent<WaveController>().color = colors[counter];
+
             float waveSizeDegUse = waveSizeDeg;
             wave.fire(baseDirection, arcWidthDeg, waveSizeDegUse, speed);
             timer = 0;
