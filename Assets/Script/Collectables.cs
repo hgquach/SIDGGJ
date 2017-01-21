@@ -18,8 +18,9 @@ public class Collectables : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            Destroy(gameObject);
             gamestate.increaseCurrent();
+
+            Destroy(gameObject);
             Debug.Log("collided");
         }
     }
