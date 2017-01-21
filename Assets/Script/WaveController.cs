@@ -14,28 +14,24 @@ public class WaveController : MonoBehaviour
         particleS = gameObject.GetComponent<ParticleSystem>();
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 8) // The Pillar layer
         {
-            var em = particleS.emission;
-            var rate = em.rate;
-            rate.constant = 0;
-            em.rate = rate;
-            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            //Debug.Log("HIT!");
+            //var em = particleS.emission;
+            //var rate = em.rate;
+            //rate.constant = 0;
+            //em.rate = rate;
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
             gameObject.GetComponent<CircleCollider2D>().enabled = false;
             //gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-            dead = true;
+            DestroyObject(gameObject);
         }
     }
 
     void Update()
     {
-        if (dead)
-        {
-            killTime += Time.deltaTime;
-            if (killTime >= 1)
-                DestroyObject(gameObject);
-        }
+
     }
 }

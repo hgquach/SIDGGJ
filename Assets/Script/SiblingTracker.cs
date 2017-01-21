@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 public class SiblingTracker : MonoBehaviour {
 	
-	public float ignoreSiblingCollisionDuration = 0.0f;
+	public float ignoreSiblingCollisionDuration = 7.5f;
 	private bool ignoringSiblingCollisions;
 	
 	private List<GameObject> _siblings;
