@@ -16,7 +16,7 @@ public class WaveController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!collision.gameObject.CompareTag("Spell Shield"))
+        if (collision.gameObject.layer == 8) // The Pillar layer
         {
             var em = particleS.emission;
             var rate = em.rate;
