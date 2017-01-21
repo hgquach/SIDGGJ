@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-    public int numOfTotalCollect;
-    public int numOfCurrentCollect; 
+    public int numOfTotalCollect = 0;
+    public int numOfCurrentCollect = 0; 
 	// Use this for initialization
 	void Start () {
-        numOfTotalCollect = 3;
-        numOfCurrentCollect = 0; 
-		
+         	
 	}
 	
 	// Update is called once  per frame
