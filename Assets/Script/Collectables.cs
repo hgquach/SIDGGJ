@@ -8,7 +8,6 @@ public class Collectables : MonoBehaviour {
     public GameObject pe;
     private GameObject tempPe;
     private Animator anim;
-	private bool ;
     // Use this for initialization
 	void Start () {
         gamestate = FindObjectOfType<GameManager>();
