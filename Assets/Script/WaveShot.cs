@@ -26,8 +26,6 @@ public class WaveShot : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        wavePrefab.GetComponent<Decay>().lifeDuration = decayTime;
-
         counter = 0;
         oneAhead = 1;
 
@@ -96,7 +94,7 @@ public class WaveShot : MonoBehaviour {
                     underglow.color = Color.white;
                 }
 
-            wave.fire(baseDirection, arcWidthDeg, waveSizeDeg, speed, colors[counter]);
+            wave.fire(baseDirection, arcWidthDeg, waveSizeDeg, speed, colors[counter], decayTime);
             
             timer = 0;
 

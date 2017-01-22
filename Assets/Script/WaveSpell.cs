@@ -7,8 +7,9 @@ public class WaveSpell : MonoBehaviour {
     public _UNITY_OBJECT_POOL pool;
 
     string passThrough;
+    float decayTimer;
 
-    public void fire(float baseDirection, float arcWidthDeg, float waveSizeDeg, float speed, string goesThrough)
+    public void fire(float baseDirection, float arcWidthDeg, float waveSizeDeg, float speed, string goesThrough, float decay)
     {
         float baseAngleRad = Mathf.Deg2Rad * baseDirection;
         float arcWidthRad = Mathf.Deg2Rad * arcWidthDeg;
@@ -19,6 +20,7 @@ public class WaveSpell : MonoBehaviour {
         //Dunno why it spreads out more at 720/2, 1080/3, or 1440/4...
 
         passThrough = goesThrough;
+        decayTimer = decay;
 
         for (float dAngleRad = 0.0f; dAngleRad <= arcWidthRad / 2; dAngleRad += waveSizeRad)
         {
@@ -49,6 +51,8 @@ public class WaveSpell : MonoBehaviour {
             obj.GetComponent<WaveController>().direction = direction;
             obj.GetComponent<WaveController>().speed = speed;
             obj.GetComponent<WaveController>().color = passThrough;
+
+            obj.GetComponent<Decay>().lifeDuration = decayTimer;
 
             obj.SetActive(true);
     }
