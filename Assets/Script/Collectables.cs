@@ -8,6 +8,7 @@ public class Collectables : MonoBehaviour {
     public GameObject pe;
     private GameObject tempPe;
     private Animator anim;
+	private bool ;
     // Use this for initialization
 	void Start () {
         gamestate = FindObjectOfType<GameManager>();
@@ -21,7 +22,7 @@ public class Collectables : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+		if (other.tag == "Player" && !anim.GetBool("isCollected"))
         {
             tempPe = Instantiate(pe, gameObject.transform.position, gameObject.transform.rotation);
             gamestate.increaseCurrent();
