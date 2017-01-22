@@ -22,6 +22,8 @@ public class PlayerControl : MonoBehaviour {
 
     private Animator anim;
 
+    public GameManager gameManager;
+
 	// Use this for initialization
 	void Start () {
         playerSpeed = 5f;
@@ -36,6 +38,7 @@ public class PlayerControl : MonoBehaviour {
 		charges = maxCharges;
 		chargeRecharge = 100;
 		charging = 0;
+        gameManager = FindObjectOfType<GameManager>();
     }
 
 	// Update is called once per frame
@@ -52,6 +55,7 @@ public class PlayerControl : MonoBehaviour {
 			boostMoveX = moveX;
 			boostMoveY = moveY;
 			charges--;
+            gameManager.soundTrigger("dash");
 		}
 		
 		if (boosting <= 0)
