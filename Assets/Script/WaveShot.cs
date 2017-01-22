@@ -35,6 +35,26 @@ public class WaveShot : MonoBehaviour {
         if(colorsToSep.Length > 0)
         {
             colors = colorsToSep.Split(","[0]);
+            if (colors[counter] == "w")
+            {
+                underglow.color = Color.white;
+            }
+            if (colors[counter] == "r")
+            {
+                underglow.color = Color.red;
+            }
+            if (colors[counter] == "g")
+            {
+                underglow.color = Color.green;
+            }
+            if (colors[counter] == "b")
+            {
+                underglow.color = Color.blue;
+            }
+            if (colors[counter] == "y")
+            {
+                underglow.color = Color.yellow;
+            }
         }
         //Debug.Log(colors);
     }
