@@ -33,6 +33,12 @@ public class GameOverMenu : MonoBehaviour {
     {
         totalScore = gameManager.totalScore;
         scoreText.text = "Score: " + totalScore.ToString();
+
+        // Press R to Retry
+        if (Input.GetButtonDown("Fire3"))
+        {
+            RetryLevel();
+        }
     }
 	
 	
