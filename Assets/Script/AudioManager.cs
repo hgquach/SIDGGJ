@@ -67,8 +67,9 @@ public class AudioManager : MonoBehaviour {
 
     public void PlaySound (string _name)
     {
-        for(int i =0; i < sounds.Length; i++)
+        for(int i = 0; i < sounds.Length; i++)
         {
+            //Debug.Log(sounds[i].name);
             if (sounds[i].name == _name)
             {
                 sounds[i].Play();
