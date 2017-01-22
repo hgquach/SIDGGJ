@@ -24,11 +24,11 @@ public class PlayerControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        playerSpeed = 10f;
+        playerSpeed = 5f;
         playerRigidbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         anim.SetBool("isMoving", false);
-        boostSpd = 3f;
+        boostSpd = 6f;
         boostTime = 7;
         boostDelay = 5;
         boosting = 0;
