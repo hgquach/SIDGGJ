@@ -4,39 +4,38 @@ using System.Collections.Generic;
 
 public class WaveController : MonoBehaviour
 {
-    ParticleSystem particleS; //If we use it.
+    //ParticleSystem particleS; //If we use it.
     float killTime = 0;
     bool dead = false;
 
     public string color;
     public string goesThrough;
 
-    void Start()
+    public float speed;
+    public Vector2 direction;
+
+    void OnEnable()
     {
-        particleS = gameObject.GetComponent<ParticleSystem>();
-        if(color != "w")
+        //particleS = gameObject.GetComponent<ParticleSystem>();
+        if (color != "w")
         {
             if(color == "r")
-            {
-                goesThrough = "RedObstacle";
-            }
+            {   goesThrough = "RedObstacle";    }
             if (color == "g")
-            {
-                goesThrough = "GreenObstacle";
-            }
+            {   goesThrough = "GreenObstacle";  }
             if (color == "b")
-            {
-                goesThrough = "BlueObstacle";
-            }
+            {   goesThrough = "BlueObstacle";   }
             if (color == "y")
-            {
-                goesThrough = "YellowObstacle";
-            }
+            {   goesThrough = "YellowObstacle"; }
         }
         else
         {
             goesThrough = "ALL";
         }
+
+        gameObject.GetComponent<Rigidbody2D>().velocity = direction * speed;
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
+        gameObject.GetComponent<CircleCollider2D>().enabled = true;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -45,7 +44,7 @@ public class WaveController : MonoBehaviour
         {
             gameObject.GetComponent<MeshRenderer>().enabled = false;
             gameObject.GetComponent<CircleCollider2D>().enabled = false;
-            DestroyObject(gameObject);
+            gameObject.SetActive(false);
         }
 
         if (collision.gameObject.layer == 8) // The Pillar layer
@@ -54,7 +53,7 @@ public class WaveController : MonoBehaviour
             {
                 gameObject.GetComponent<MeshRenderer>().enabled = false;
                 gameObject.GetComponent<CircleCollider2D>().enabled = false;
-                DestroyObject(gameObject);
+                gameObject.SetActive(false);
             }
             else
             {
@@ -62,7 +61,7 @@ public class WaveController : MonoBehaviour
                 {
                     gameObject.GetComponent<MeshRenderer>().enabled = false;
                     gameObject.GetComponent<CircleCollider2D>().enabled = false;
-                    DestroyObject(gameObject);
+                    gameObject.SetActive(false);
                 }
             }
         }

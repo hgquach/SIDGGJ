@@ -28,9 +28,6 @@ public class WaveShot : MonoBehaviour {
 
         wavePrefab.GetComponent<Decay>().lifeDuration = decayTime;
 
-        wave = GetComponent<WaveSpell>();
-        wave.wavePrefab = wavePrefab;
-
         counter = 0;
         oneAhead = 1;
 
@@ -51,14 +48,6 @@ public class WaveShot : MonoBehaviour {
 
         if(timer >= timeLimit)
         {
-            if (colors.Length != 0) // Changes the internal "color" code, so the wave knows what is going to be stopped.
-                {
-                    wave.wavePrefab.GetComponent<WaveController>().color = colors[counter];
-                }
-            else
-                {
-                    wave.wavePrefab.GetComponent<WaveController>().color = "w";
-                }
             if (colors.Length != 0) // Changes the color of the light under the Generator, so you can predict what's coming up!
                 {
                     if (colors[oneAhead] == "w")
@@ -87,8 +76,12 @@ public class WaveShot : MonoBehaviour {
                     underglow.color = Color.white;
                 }
 
-            float waveSizeDegUse = waveSizeDeg;
-            wave.fire(baseDirection, arcWidthDeg, waveSizeDegUse, speed);
+            int totalShots = (int)(arcWidthDeg / waveSizeDeg);
+            for (int i = 0; i < totalShots; i += (int)waveSizeDeg)
+            {
+                wave.fire(baseDirection, arcWidthDeg, i, speed, colors[counter]);
+            }
+            
             timer = 0;
 
             underglow.range = 0;
