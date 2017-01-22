@@ -32,8 +32,8 @@ public class PlayerControl : MonoBehaviour {
         tr = GetComponent<TrailRenderer>();
         anim.SetBool("isMoving", false);
         boostSpd = 6f;
-        boostTime = 7;
-        boostDelay = 5;
+        boostTime = 5;
+        boostDelay = 3;
         boosting = 0;
 		maxCharges = 3;
 		charges = maxCharges;
