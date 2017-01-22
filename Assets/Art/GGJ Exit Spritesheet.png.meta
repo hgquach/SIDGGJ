@@ -1,9 +1,29 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 9e429579bb00ba84db178611f888cfb4
 timeCreated: 1485119480
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
+=======
+guid: 1d09ed49b8086914aa5fe16c6803b730
+timeCreated: 1485119025
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: GGJ Exit Spritesheet_0
+    21300002: GGJ Exit Spritesheet_1
+    21300004: GGJ Exit Spritesheet_2
+    21300006: GGJ Exit Spritesheet_3
+    21300008: GGJ Exit Spritesheet_4
+    21300010: GGJ Exit Spritesheet_5
+    21300012: GGJ Exit Spritesheet_6
+    21300014: GGJ Exit Spritesheet_7
+    21300016: GGJ Exit Spritesheet_8
+    21300018: GGJ Exit Spritesheet_9
+    21300020: GGJ Exit Spritesheet_10
+    21300022: GGJ Exit Spritesheet_11
+>>>>>>> origin/master
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -27,14 +47,22 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+<<<<<<< HEAD
     filterMode: -1
+=======
+    filterMode: 0
+>>>>>>> origin/master
     aniso: -1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
   spriteMode: 1
+=======
+  spriteMode: 2
+>>>>>>> origin/master
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -58,9 +86,195 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+<<<<<<< HEAD
   spriteSheet:
     serializedVersion: 2
     sprites: []
+=======
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GGJ Exit Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 5
+        width: 90
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GGJ Exit Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 4
+        width: 90
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GGJ Exit Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 6
+        width: 87
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GGJ Exit Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 6
+        width: 87
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GGJ Exit Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 5
+        width: 87
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GGJ Exit Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 7
+        width: 87
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GGJ Exit Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 8
+        width: 90
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GGJ Exit Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 8
+        width: 90
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GGJ Exit Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 5
+        width: 89
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GGJ Exit Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 3
+        width: 89
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GGJ Exit Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 4
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GGJ Exit Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 4
+        width: 88
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+>>>>>>> origin/master
     outline: []
   spritePackingTag: 
   userData: 
