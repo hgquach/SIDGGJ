@@ -29,6 +29,10 @@ public class Rotato : MonoBehaviour {
             {
                 waveShot.baseDirection -= 360;
             }
+            if(waveShot.baseDirection <= 0)
+            {
+                waveShot.baseDirection += 360;
+            }
             timer = 0;
 
             if(flip)
