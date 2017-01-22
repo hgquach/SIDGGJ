@@ -1,13 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 9e429579bb00ba84db178611f888cfb4
-timeCreated: 1485119480
-licenseType: Free
-TextureImporter:
-  fileIDToRecycleName: {}
-=======
 guid: 1d09ed49b8086914aa5fe16c6803b730
-timeCreated: 1485119025
+timeCreated: 1485121759
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -23,7 +16,6 @@ TextureImporter:
     21300018: GGJ Exit Spritesheet_9
     21300020: GGJ Exit Spritesheet_10
     21300022: GGJ Exit Spritesheet_11
->>>>>>> origin/master
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -47,22 +39,14 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
-<<<<<<< HEAD
     filterMode: -1
-=======
-    filterMode: 0
->>>>>>> origin/master
     aniso: -1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
-  spriteMode: 1
-=======
   spriteMode: 2
->>>>>>> origin/master
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -86,11 +70,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-<<<<<<< HEAD
-  spriteSheet:
-    serializedVersion: 2
-    sprites: []
-=======
   - buildTarget: Standalone
     maxTextureSize: 2048
     textureFormat: -1
@@ -274,7 +253,6 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
->>>>>>> origin/master
     outline: []
   spritePackingTag: 
   userData: 
