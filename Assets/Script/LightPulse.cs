@@ -5,6 +5,7 @@ using UnityEngine;
 public class LightPulse : MonoBehaviour {
 
     public float timer;
+    public float flipflop = 3;
     bool flip = true;
 
 	// Use this for initialization
