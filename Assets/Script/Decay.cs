@@ -8,13 +8,13 @@ public class Decay : MonoBehaviour {
 	private float killTime;
 
 	// Use this for initialization
-	void Start () {
+	void OnEnable() {
 		killTime = Time.fixedTime + lifeDuration;
 	}
 	
 	void FixedUpdate () {
 		if (killTime <= Time.fixedTime) {
-			Destroy (gameObject);
-		}
+            gameObject.SetActive(false);
+        }
 	}
 }
