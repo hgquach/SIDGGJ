@@ -8,7 +8,7 @@ public class TimeManager : MonoBehaviour {
 
     public float currentSlowMo = 0f;
     public float slowTimeAllowed = 2f;
-    public bool freeze;
+    public bool freeze = false;
 
     void Update()
     {
@@ -18,7 +18,7 @@ public class TimeManager : MonoBehaviour {
         {
             //print("asdf");
             currentSlowMo += Time.deltaTime;
-            print(currentSlowMo);
+            //print(currentSlowMo);
             
         }
 

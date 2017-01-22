@@ -13,6 +13,8 @@ public class GameOverMenu : MonoBehaviour {
     public int retryScene = 2;
     public int totalScore;
 
+    public TimeManager afterDeath;
+
     public GameManager gameManager;
 
     // Use this for initialization
@@ -40,6 +42,7 @@ public class GameOverMenu : MonoBehaviour {
         SceneManager.LoadScene(retryScene);
         deathMenu.enabled = false;
         gameManager.totalScore = 0;
+        Time.timeScale = 1.0f;
     }
 
     public void QuitGame()
