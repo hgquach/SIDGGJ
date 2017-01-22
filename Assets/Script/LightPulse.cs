@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LightPulse : MonoBehaviour {
 
-    public Exit myExit;
     float timer;
     float flipflop;
 
@@ -23,7 +22,7 @@ public class LightPulse : MonoBehaviour {
         timer += Time.deltaTime;
         if(timer > Mathf.Abs(flipflop) || timer < Mathf.Abs(flipflop))
         {
-            myExit.GetComponent<Light>().range = timer;
+            gameObject.GetComponent<Light>().range = timer * 3;
         }
 	}
 }
