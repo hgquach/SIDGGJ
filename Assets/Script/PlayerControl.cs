@@ -36,8 +36,8 @@ public class PlayerControl : MonoBehaviour {
         boostTime = 5;
         boostDelay = 3;
         boosting = 0;
-		maxCharges = 3;
-		charges = maxCharges;
+		maxCharges = 4;
+		charges = 4;
 		chargeRecharge = 100;
 		charging = 0;
 
@@ -117,6 +117,7 @@ public class PlayerControl : MonoBehaviour {
         switch (charges)
         {
             case 0:
+                // change the trail to white
                 gradient.SetKeys(
                     new GradientColorKey[] {new GradientColorKey(Color.white, 0.0f),
                     new GradientColorKey(Color.white, 39.4f),new GradientColorKey(Color.white, 95.6f)},
@@ -124,7 +125,9 @@ public class PlayerControl : MonoBehaviour {
                     new GradientAlphaKey(169,98.5f) });
                 tr.colorGradient = gradient;
                 break;
+
             case 1:
+                // change the trail to red
                 gradient.SetKeys(
                     new GradientColorKey[] {new GradientColorKey(new Color(137,0,0), 0.0f),
                     new GradientColorKey(new Color(240,56,56), 39.4f),new GradientColorKey(new Color(255,184,184), 95.6f)},
@@ -132,7 +135,9 @@ public class PlayerControl : MonoBehaviour {
                     new GradientAlphaKey(169,98.5f) });
                 tr.colorGradient = gradient;
                 break;
+
             case 2:
+                // change the trail to yellow
                 gradient.SetKeys(
                     new GradientColorKey[] {new GradientColorKey(new Color(246,229,0), 0.0f),
                     new GradientColorKey(new Color(248,243,102), 39.4f),new GradientColorKey(new Color(240,251,207), 95.6f)},
@@ -140,6 +145,8 @@ public class PlayerControl : MonoBehaviour {
                     new GradientAlphaKey(169,98.5f) });
                 tr.colorGradient = gradient;
                 break;
+                // cha
+
             case 3:
                 gradient.SetKeys(
                     new GradientColorKey[] {new GradientColorKey(new Color(11,100,8), 0.0f),
