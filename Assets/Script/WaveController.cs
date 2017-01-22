@@ -20,17 +20,30 @@ public class WaveController : MonoBehaviour
         if (color != "w")
         {
             if(color == "r")
-            {   goesThrough = "RedObstacle";    }
+            {
+                goesThrough = "RedObstacle";
+                gameObject.GetComponent<Light>().color = Color.red; 
+            }
             if (color == "g")
-            {   goesThrough = "GreenObstacle";  }
+            {
+                goesThrough = "GreenObstacle";
+                gameObject.GetComponent<Light>().color = Color.green;
+            }
             if (color == "b")
-            {   goesThrough = "BlueObstacle";   }
+            {
+                goesThrough = "BlueObstacle";
+                gameObject.GetComponent<Light>().color = Color.blue;
+            }
             if (color == "y")
-            {   goesThrough = "YellowObstacle"; }
+            {
+                goesThrough = "YellowObstacle";
+                gameObject.GetComponent<Light>().color = Color.yellow;
+            }
         }
         else
         {
             goesThrough = "ALL";
+            gameObject.GetComponent<Light>().color = Color.white;
         }
 
         gameObject.GetComponent<Rigidbody2D>().velocity = direction * speed;
