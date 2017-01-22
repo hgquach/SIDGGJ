@@ -53,6 +53,14 @@ public class WaveController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.gameObject.CompareTag("Resonator") && goesThrough != "ALL")
+        {
+            collision.GetComponent<WaveShot>().resonate();
+
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            gameObject.GetComponent<CircleCollider2D>().enabled = false;
+            gameObject.SetActive(false);
+        }
         if (collision.gameObject.layer == 9) // The Wall layer
         {
             gameObject.GetComponent<MeshRenderer>().enabled = false;

@@ -23,6 +23,8 @@ public class WaveShot : MonoBehaviour {
     public int counter;
     private int oneAhead; //The predictor for the next colour of the wave.
 
+    public bool resonates = false; //Is this a resonater Generator?
+
     // Use this for initialization
     void Start () {
 
@@ -57,16 +59,32 @@ public class WaveShot : MonoBehaviour {
         //Debug.Log(colors);
     }
 	
+    public void resonate()
+    {
+        if (timer >= timeLimit)
+        {
+            wave.fire(baseDirection, arcWidthDeg, waveSizeDeg, speed, colors[counter], decayTime);
+            timer = 0;
+        }
+    }
+
 	// Update is called once per frame
 	void Update () {
         timer += Time.deltaTime;
 
-        float percent = timer / timeLimit;
-        underglow.range = 4 * percent; 
-
-        if(timer >= timeLimit)
+        if (!resonates)
         {
-            if (colors.Length != 0) // Changes the color of the light under the Generator, so you can predict what's coming up!
+            float percent = timer / timeLimit;
+            underglow.range = 4 * percent;
+        }
+        else
+        {
+            underglow.range = 3;
+        }
+
+        if(timer >= timeLimit && !resonates)
+        {
+            if (colors.Length > 1) // Changes the color of the light under the Generator, so you can predict what's coming up!
                 {
                     if (colors[oneAhead] == "w")
                     {
