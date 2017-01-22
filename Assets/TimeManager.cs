@@ -13,10 +13,10 @@ public class TimeManager : MonoBehaviour {
     void Update()
     {
         
-        print("update");
+        //print("update");
         if (Time.timeScale <1)
         {
-            print("asdf");
+            //print("asdf");
             currentSlowMo += Time.deltaTime;
             print(currentSlowMo);
             
@@ -40,7 +40,7 @@ public class TimeManager : MonoBehaviour {
     public void SlowMotion()
     {
         Time.timeScale = slowDownFactor;
-        print("SLOWMO");
+        //print("SLOWMO");
     }
 
 }
