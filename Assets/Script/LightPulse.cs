@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LightPulse : MonoBehaviour {
 
-    float timer;
-    float flipflop;
+    public float timer;
+    bool flip = true;
 
 	// Use this for initialization
 	void Start () {
@@ -19,10 +19,25 @@ public class LightPulse : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        timer += Time.deltaTime;
-        if(timer > Mathf.Abs(flipflop) || timer < Mathf.Abs(flipflop))
+        if (flip)
         {
-            gameObject.GetComponent<Light>().range = timer * 3;
+            timer += Time.deltaTime;
         }
-	}
+        else
+        {
+            timer -= Time.deltaTime;
+        }
+
+        if(timer > flipflop)
+        {
+            flip = false;
+        }
+        if(timer < -flipflop)
+        {
+            flip = true;
+        }
+
+        gameObject.GetComponent<Light>().range = Mathf.Abs(timer) * 2.5f;
+
+    }
 }
