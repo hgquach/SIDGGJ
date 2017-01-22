@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
 
     public Text scoreText;
     private int CollectLeft;
+    public int totalScore;
 
     //cache
     private AudioManager audioManager;
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour {
     {
         ++numOfCurrentCollect;
         --CollectLeft;
+        totalScore += 1;
         audioManager.PlaySound(collectSound);
         scoreText.text = "Bugs Left: " + CollectLeft;
     }

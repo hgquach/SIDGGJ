@@ -7,17 +7,30 @@ using UnityEngine.SceneManagement;
 public class GameOverMenu : MonoBehaviour {
 
     public Canvas deathMenu;
+    public Text scoreText;
     public Button retryText;
     public Button quitText;
     public int retryScene = 2;
+    public int totalScore;
+
+    public GameManager gameManager;
 
     // Use this for initialization
     void Start () {
         deathMenu = deathMenu.GetComponent<Canvas>();
         retryText = retryText.GetComponent<Button>();
         quitText = quitText.GetComponent<Button>();
+        gameManager = gameManager.GetComponent<GameManager>();
 
         deathMenu.enabled = false;
+
+        
+    }
+
+    void Update()
+    {
+        totalScore = gameManager.totalScore;
+        scoreText.text = "Score: " + totalScore.ToString();
     }
 	
 	
@@ -26,7 +39,7 @@ public class GameOverMenu : MonoBehaviour {
     {
         SceneManager.LoadScene(retryScene);
         deathMenu.enabled = false;
-
+        gameManager.totalScore = 0;
     }
 
     public void QuitGame()
