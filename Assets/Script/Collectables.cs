@@ -26,8 +26,8 @@ public class Collectables : MonoBehaviour {
             tempPe = Instantiate(pe, gameObject.transform.position, gameObject.transform.rotation);
             gamestate.increaseCurrent();
             anim.SetBool("isCollected",true);
-            Destroy(gameObject,2);
-            Destroy(tempPe,3);
+            Destroy(gameObject,1);
+            Destroy(tempPe,2);
             Debug.Log("collided");
         }
     }
