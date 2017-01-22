@@ -11,12 +11,26 @@ public class GameManager : MonoBehaviour {
     public Text scoreText;
     private int CollectLeft;
 
+    //cache
+    private AudioManager audioManager;
+
+    // Audio
+    public string collectSound;
+
 	// Use this for initialization
 	void Start () {
 				exit = GameObject.FindWithTag("Finish");
 				exit.SetActive(false);
         CollectLeft = numOfTotalCollect;
         scoreText.text = "Bugs Left: " + CollectLeft;
+
+        //caching
+        audioManager = AudioManager.instance;
+        if(audioManager == null)
+        {
+            Debug.LogError("No AudioManager found in the scene");
+        }
+        //audioManager.PlaySound("Respawn");
     }
 	
 	// Update is called once  per frame
@@ -35,6 +49,7 @@ public class GameManager : MonoBehaviour {
     {
         ++numOfCurrentCollect;
         --CollectLeft;
+        audioManager.PlaySound(collectSound);
         scoreText.text = "Bugs Left: " + CollectLeft;
     }
 }

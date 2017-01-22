@@ -38,14 +38,29 @@ public class Sound{
 
 public class AudioManager : MonoBehaviour {
 
+    public static AudioManager instance;
+
     [SerializeField]
     Sound[] sounds;
 	
+    void Awake()
+    {
+        if(instance != null)
+        {
+            Debug.Log("More than one AudioManager in scene.");
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+
     void Start()
     {
         for (int i =0; i < sounds.Length; i++)
         {
             GameObject _go = new GameObject("Sound_" + i + "_" + sounds[i].name);
+            _go.transform.SetParent(this.transform);
             sounds[i].SetSource(_go.AddComponent<AudioSource>());
         }
     }
