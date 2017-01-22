@@ -9,6 +9,7 @@ public class GameOverMenu : MonoBehaviour {
     public Canvas deathMenu;
     public Button retryText;
     public Button quitText;
+    public int retryScene = 2;
 
     // Use this for initialization
     void Start () {
@@ -23,7 +24,7 @@ public class GameOverMenu : MonoBehaviour {
 
     public void RetryLevel()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(retryScene);
         deathMenu.enabled = false;
 
     }
