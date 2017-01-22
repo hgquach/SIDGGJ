@@ -53,6 +53,6 @@ public class GameOverMenu : MonoBehaviour {
 
     public void QuitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene(0);
     }
 }
