@@ -21,6 +21,7 @@ public class PlayerControl : MonoBehaviour {
     private Rigidbody2D playerRigidbody; 
 
     private Animator anim;
+
 	// Use this for initialization
 	void Start () {
         playerSpeed = 10f;
@@ -91,6 +92,14 @@ public class PlayerControl : MonoBehaviour {
 				if (charges < maxCharges)
 				{
 						charging++;
+				}
+
+				Vector2 moveDirection;  
+				Rigidbody2D rb2d = gameObject.GetComponent<Rigidbody2D>();
+				moveDirection = rb2d.velocity;
+				if (moveDirection != Vector2.zero) {
+						float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
+						transform.rotation = Quaternion.AngleAxis(angle-90, Vector3.forward);
 				}
 	}
 }
