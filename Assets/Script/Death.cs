@@ -7,6 +7,8 @@ public class Death : MonoBehaviour {
 
         public GameOverMenu DeathMenu;
 
+    public TimeManager timeManager;
+
 	// Use this for initialization
 	void Start () {
 				isDying = false;
@@ -15,18 +17,22 @@ public class Death : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-				if (isDying)
+		if (isDying)
 				{
-						Destroy(gameObject);
-				}
+            
+
+			Destroy(gameObject);
+		}
 	}
 
 		void OnTriggerEnter2D(Collider2D other)
 		{
 				if (other.gameObject.CompareTag("Wave"))
 				{
-						
-						Destroy(this.gameObject);
+                        // slow mo death
+                        timeManager.SlowMotion();
+
+                        Destroy(this.gameObject);
                         //activate death menu
                         DeathMenu.deathMenu.enabled = true;
 				}

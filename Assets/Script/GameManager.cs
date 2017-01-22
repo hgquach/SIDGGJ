@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour {
 						exit.SetActive(true);
         }
 
-        print(numOfCurrentCollect);
+        //print(numOfCurrentCollect);
 		
 	}
 
