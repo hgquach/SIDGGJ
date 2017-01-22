@@ -6,11 +6,17 @@ using UnityEngine.SceneManagement;
 public class Exit : MonoBehaviour {
 
     public int nextLevel = 2;
+    public Light ourlight;
 
 	// Use this for initialization
 	void Start () {
 		
 	}
+
+    void OnEnable()
+    {
+        ourlight.enabled = true;
+    }
 	
 	// Update is called once per frame
 	void Update () {
