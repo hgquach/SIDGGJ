@@ -10,13 +10,17 @@ public class Death : MonoBehaviour
     private GameObject tempPe;
     private Animator anim;
 
+    private GameObject GM;
+    private GameManager gameManager;
 
 
     // Use this for initialization
     void Start ()
     {
         anim = GetComponent<Animator>();
-	}
+        GM = GameObject.FindGameObjectWithTag("gameState");
+        gameManager = GM.GetComponent<GameManager>();
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -28,6 +32,7 @@ public class Death : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Wave"))
 		{
+            gameManager.soundTrigger("death");
             // slow mo death
             tempPe = Instantiate(pe, gameObject.transform.position, gameObject.transform.rotation);
 

@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour {
     public string BGM;
     public string collectSound;
     public string dashSound;
+    public string deathSound;
 
 	// Use this for initialization
 	void Start () {
@@ -60,9 +61,13 @@ public class GameManager : MonoBehaviour {
 
     public void soundTrigger(string _name)
     {
-        if(_name == "dash")
+        if (_name == "dash")
         {
             audioManager.PlaySound(dashSound);
+        }
+        else if (_name == "death")
+        {
+            audioManager.PlaySound(deathSound);
         }
         
     }
