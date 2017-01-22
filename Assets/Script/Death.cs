@@ -6,7 +6,10 @@ public class Death : MonoBehaviour
 {
     public GameOverMenu DeathMenu;
     public TimeManager timeManager;
+    public GameObject pe;
+    private GameObject tempPe;
     private Animator anim;
+
 
 
     // Use this for initialization
@@ -26,7 +29,10 @@ public class Death : MonoBehaviour
 		if (other.gameObject.CompareTag("Wave"))
 		{
             // slow mo death
+            tempPe = Instantiate(pe, gameObject.transform.position, gameObject.transform.rotation);
+
             timeManager.SlowMotion();
+            Destroy(tempPe,2);
             anim.SetBool("isDead", true);
             //activate death menu
             DeathMenu.deathMenu.enabled = true;
