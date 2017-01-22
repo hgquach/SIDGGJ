@@ -10,12 +10,15 @@ public class GameManager : MonoBehaviour {
 
     public Text scoreText;
     private int CollectLeft;
+    public int totalScore;
 
     //cache
     private AudioManager audioManager;
 
     // Audio
+    public string BGM;
     public string collectSound;
+    public string dashSound;
 
 	// Use this for initialization
 	void Start () {
@@ -30,7 +33,8 @@ public class GameManager : MonoBehaviour {
         {
             Debug.LogError("No AudioManager found in the scene");
         }
-        //audioManager.PlaySound("Respawn");
+        audioManager.PlaySound(BGM);
+        
     }
 	
 	// Update is called once  per frame
@@ -49,7 +53,17 @@ public class GameManager : MonoBehaviour {
     {
         ++numOfCurrentCollect;
         --CollectLeft;
+        totalScore += 1;
         audioManager.PlaySound(collectSound);
         scoreText.text = "Bugs Left: " + CollectLeft;
+    }
+
+    public void soundTrigger(string _name)
+    {
+        if(_name == "dash")
+        {
+            audioManager.PlaySound(dashSound);
+        }
+        
     }
 }

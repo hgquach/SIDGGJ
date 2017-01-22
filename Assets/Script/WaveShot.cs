@@ -26,8 +26,6 @@ public class WaveShot : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        wavePrefab.GetComponent<Decay>().lifeDuration = decayTime;
-
         counter = 0;
         oneAhead = 1;
 
@@ -96,16 +94,7 @@ public class WaveShot : MonoBehaviour {
                     underglow.color = Color.white;
                 }
 
-            int totalShots = (int)(arcWidthDeg / waveSizeDeg);
-
-            //The math should be -- you're firing a certain amount of shots, every waveSizeDeg.
-            //So, 360 at 1 = 360 shots. Right...?
-            //Dunno why it spreads out more at 720/2, 1080/3, or 1440/4...
-
-            for (int i = 0; i < totalShots; i += (int)waveSizeDeg)
-            {
-                wave.fire(baseDirection, arcWidthDeg, i, speed, colors[counter]);
-            }
+            wave.fire(baseDirection, arcWidthDeg, waveSizeDeg, speed, colors[counter], decayTime);
             
             timer = 0;
 
