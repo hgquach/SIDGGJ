@@ -23,7 +23,8 @@ public class PlayerControl : MonoBehaviour {
 	public int maxCharges;
 	public int chargeRecharge;
 
-    //public GameManager gameManager;
+    private GameObject GM;
+    private GameManager gameManager;
 	// Use this for initialization
 	void Start () {
         playerSpeed = 5f;
@@ -40,7 +41,8 @@ public class PlayerControl : MonoBehaviour {
 		chargeRecharge = 100;
 		charging = 0;
 
-        //gameManager = gameManager.GetComponent<GameManager>();
+        GM = GameObject.FindGameObjectWithTag("gameState");
+        gameManager = GM.GetComponent<GameManager>();
     }
     void Update()
     {
@@ -57,7 +59,7 @@ public class PlayerControl : MonoBehaviour {
             boostMoveY = moveY;
             charges--;
             //dash sound
-            //gameManager.soundTrigger("dash");
+            gameManager.soundTrigger("dash");
         }
 
         if (boosting <= 0)
