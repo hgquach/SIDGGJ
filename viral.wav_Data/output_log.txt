@@ -1,0 +1,59 @@
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 755M (ID=0xfcd)
+    Vendor:   NVIDIA
+    VRAM:     2019 MB
+    Driver:   21.21.13.7633
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viral.wav_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viral.wav_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viral.wav_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viral.wav_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viral.wav_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viral.wav_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viral.wav_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viral.wav_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viral.wav_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viral.wav_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viral.wav_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viral.wav_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.026 seconds
+Platform assembly: C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viral.wav_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viral.wav_Data\Managed\System.dll (this message is harmless)
+desktop: 1600x900 40Hz; virtual: 1600x900 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.839189 ms
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.892780 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 976.
+Total: 0.359228 ms (FindLiveObjects: 0.038916 ms CreateObjectMapping: 0.035495 ms MarkObjects: 0.271132 ms  DeleteObjects: 0.013257 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Sound.Play () [0x00000] in <filename unknown>:0 
+  at AudioManager.PlaySound (System.String _name) [0x00000] in <filename unknown>:0 
+  at GameManager.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.151657 ms
+
+Unloading 320 unused Assets to reduce memory usage. Loaded Objects now: 298.
+Total: 0.580325 ms (FindLiveObjects: 0.041482 ms CreateObjectMapping: 0.038061 ms MarkObjects: 0.263862 ms  DeleteObjects: 0.236492 ms)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2b8c -> priority: 1 
+  Thread -> id: 31ec -> priority: 1 
