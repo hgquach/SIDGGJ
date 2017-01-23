@@ -19,9 +19,30 @@ Platform assembly: C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viralwav(best)_Dat
 Loading C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viralwav(best)_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
 Platform assembly: C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viralwav(best)_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viralwav(best)_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.046 seconds
+- Completed reload, in  0.023 seconds
 Platform assembly: C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viralwav(best)_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\igolf_000\Documents\GitHub\SIDGGJ\viralwav(best)_Data\Managed\System.dll (this message is harmless)
 desktop: 1600x900 40Hz; virtual: 1600x900 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.073690 ms
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.789716 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 976.
+Total: 0.350675 ms (FindLiveObjects: 0.041054 ms CreateObjectMapping: 0.032501 ms MarkObjects: 0.261723 ms  DeleteObjects: 0.014967 ms)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.517448 ms
+
+Unloading 320 unused Assets to reduce memory usage. Loaded Objects now: 298.
+Total: 0.432357 ms (FindLiveObjects: 0.043192 ms CreateObjectMapping: 0.028225 ms MarkObjects: 0.251460 ms  DeleteObjects: 0.109051 ms)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2c30 -> priority: 1 
+  Thread -> id: 34e0 -> priority: 1 
