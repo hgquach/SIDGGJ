@@ -17,6 +17,8 @@ public class GameOverMenu : MonoBehaviour {
 
     public GameManager gameManager;
 
+    public float highscore;
+
     // Use this for initialization
     void Start () {
         deathMenu = deathMenu.GetComponent<Canvas>();
@@ -31,8 +33,11 @@ public class GameOverMenu : MonoBehaviour {
 
     void Update()
     {
-        totalScore = gameManager.totalScore;
-        scoreText.text = "Score: " + totalScore.ToString();
+        highscore = PlayerPrefs.GetFloat("Highscore");
+        scoreText.text = "Best Time: " + highscore.ToString();
+
+        //totalScore = gameManager.totalScore;
+        //scoreText.text = "Score: " + totalScore.ToString();
 
         // Press R to Retry
         if (Input.GetButtonDown("Fire3"))
