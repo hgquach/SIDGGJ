@@ -7,6 +7,7 @@ public class PlayTimeScript : MonoBehaviour {
 
     public float playtime = 0;
     bool runPlayTime = true;
+    bool coroutineRunning = false;
 
     Scene scene;
     int sceneBuildIndex;
@@ -28,19 +29,32 @@ public class PlayTimeScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        scene = SceneManager.GetActiveScene();
-		StartCoroutine(Playtime());
+        //scene = SceneManager.GetActiveScene();
+
+        //if(scene.buildIndex == 2 && playtime == 0)
+        //{
+        //    StartCoroutine(Playtime());
+        //}
+		
 	}
 
     void Update()
     {
         scene = SceneManager.GetActiveScene();
         sceneBuildIndex = scene.buildIndex;
-        //Change to scene of end screen
-        if (sceneBuildIndex == 10)
+        //Change to scene of end screen or main menu
+        if (sceneBuildIndex == 10 || sceneBuildIndex == 0 )
         {
             runPlayTime = false;
-            
+            coroutineRunning = false;
+        }
+
+        if (scene.buildIndex == 2 && playtime == 0 && coroutineRunning == false)
+        {
+            runPlayTime = true;
+            StartCoroutine(Playtime());
+
+            coroutineRunning = true;
         }
     }
 
@@ -51,9 +65,21 @@ public class PlayTimeScript : MonoBehaviour {
             yield return new WaitForSeconds(1);
             playtime += 1;
         }
+        //set the last player's time
+        PlayerPrefs.SetFloat("Current Time", playtime);
+
         //when coroutine ends saved playtime to playerprefs
-        PlayerPrefs.SetFloat("Highscore", playtime);
-        print("highscore set");
+        if(PlayerPrefs.GetFloat("Highscore") == 0 )
+        {
+            PlayerPrefs.SetFloat("Highscore", playtime);
+            print("first time highscore set");
+        }
+        else if (PlayerPrefs.GetFloat("Highscore") > playtime)
+        {
+            PlayerPrefs.SetFloat("Highscore", playtime);
+            print("highscore set");
+        }
+        playtime = 0;
     }
 
   

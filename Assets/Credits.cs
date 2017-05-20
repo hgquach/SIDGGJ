@@ -8,6 +8,8 @@ public class Credits : MonoBehaviour
 {
     
     public Button exitText;
+    public Text yourTimeText;
+    public Text highscoreText;
 
     // Use this for initialization
     void Start()
@@ -15,6 +17,8 @@ public class Credits : MonoBehaviour
        
         exitText = exitText.GetComponent<Button>();
 
+        yourTimeText.text = "Your Time: " + PlayerPrefs.GetFloat("Current Time").ToString();
+        highscoreText.text = "Best Time: " + PlayerPrefs.GetFloat("Highscore").ToString();
     }
 
     public void ExitGame()
