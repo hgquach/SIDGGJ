@@ -1,0 +1,172 @@
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 755M (ID=0xfcd)
+    Vendor:   NVIDIA
+    VRAM:     2019 MB
+    Driver:   21.21.13.7654
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\igolf_000\Documents\College Work\viralwav(3)_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\igolf_000\Documents\College Work\viralwav(3)_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\igolf_000\Documents\College Work\viralwav(3)_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\igolf_000\Documents\College Work\viralwav(3)_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\igolf_000\Documents\College Work\viralwav(3)_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\igolf_000\Documents\College Work\viralwav(3)_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\igolf_000\Documents\College Work\viralwav(3)_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\igolf_000\Documents\College Work\viralwav(3)_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\igolf_000\Documents\College Work\viralwav(3)_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\igolf_000\Documents\College Work\viralwav(3)_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\igolf_000\Documents\College Work\viralwav(3)_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\igolf_000\Documents\College Work\viralwav(3)_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.144 seconds
+Platform assembly: C:\Users\igolf_000\Documents\College Work\viralwav(3)_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\igolf_000\Documents\College Work\viralwav(3)_Data\Managed\System.dll (this message is harmless)
+desktop: 1600x900 40Hz; virtual: 1600x900 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 3.205688 ms
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.522995 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 980.
+Total: 0.469135 ms (FindLiveObjects: 0.069707 ms CreateObjectMapping: 0.043192 ms MarkObjects: 0.333997 ms  DeleteObjects: 0.021382 ms)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Enter Next Level
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 9.397680 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1096.
+Total: 1.057158 ms (FindLiveObjects: 0.154810 ms CreateObjectMapping: 0.075266 ms MarkObjects: 0.812541 ms  DeleteObjects: 0.012401 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Sound.Play () [0x00000] in <filename unknown>:0 
+  at AudioManager.PlaySound (System.String _name) [0x00000] in <filename unknown>:0 
+  at GameManager.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Enter Next Level
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.920004 ms
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1116.
+Total: 1.021663 ms (FindLiveObjects: 0.194582 ms CreateObjectMapping: 0.066286 ms MarkObjects: 0.733425 ms  DeleteObjects: 0.025231 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Sound.Play () [0x00000] in <filename unknown>:0 
+  at AudioManager.PlaySound (System.String _name) [0x00000] in <filename unknown>:0 
+  at GameManager.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Enter Next Level
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 27.031534 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1502.
+Total: 0.579470 ms (FindLiveObjects: 0.099643 ms CreateObjectMapping: 0.044048 ms MarkObjects: 0.422093 ms  DeleteObjects: 0.012401 ms)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+collided
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Enter Next Level
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 9.581143 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1133.
+Total: 0.967351 ms (FindLiveObjects: 0.153099 ms CreateObjectMapping: 0.069707 ms MarkObjects: 0.730004 ms  DeleteObjects: 0.012829 ms)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2ed0 -> priority: 1 
+  Thread -> id: 2fb8 -> priority: 1 
